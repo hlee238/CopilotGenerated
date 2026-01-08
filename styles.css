@@ -1,0 +1,170 @@
+:root{
+    --bg: #ffffff;
+    --text: #0b0b0b;
+    --muted: #6b7280;
+    --primary: #0b3d91; /* dark blue - high contrast with white */
+    --primary-contrast: #ffffff;
+    --focus-ring: rgba(11,61,145,0.25);
+    --max-width: 1100px;
+    --radius: 6px;
+    --gap: 1rem;
+    font-size: 16px;
+  }
+  
+  *{box-sizing:border-box}
+  html,body{
+    height:100%;
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-size:var(--font-size,16px);
+  }
+  
+  .container{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:1rem;
+  }
+  
+  /* Skip link - visible on keyboard focus */
+  .skip-link{
+    position:absolute;
+    left:1rem;
+    top:1rem;
+    background:#000;
+    color:#fff;
+    padding:0.5rem 0.75rem;
+    border-radius:4px;
+    transform:translateY(-120%);
+    transition:transform 120ms ease;
+    z-index:1000;
+  }
+  .skip-link:focus,
+  .skip-link:active{
+    transform:translateY(0);
+    outline:none;
+  }
+  
+  /* Header / nav */
+  .site-header{border-bottom:1px solid #e6e6e6}
+  .site-logo h1{font-size:1.25rem;margin:0}
+  .primary-nav .nav-list{
+    list-style:none;padding:0;margin:0;display:flex;gap:1rem;
+  }
+  .primary-nav a{
+    color:var(--primary);
+    text-decoration:none;
+    padding:0.35rem 0.5rem;
+    border-radius:4px;
+  }
+  .primary-nav a:hover,
+  .primary-nav a:focus{
+    text-decoration:underline;
+    outline:none;
+  }
+  
+  /* Main layout */
+  main{padding:1.5rem 0}
+  section{margin-bottom:1.5rem}
+  
+  /* Projects */
+  .project{margin-bottom:1.25rem;display:grid;grid-template-columns:1fr;gap:0.75rem}
+  .project img{width:100%;height:auto;border-radius:4px;display:block}
+  
+  /* Skills list */
+  .skills ul{columns:2;gap:1rem; padding-left:1rem}
+  
+  /* Forms */
+  form{background:transparent}
+  .form-row{margin-bottom:0.75rem;display:flex;flex-direction:column;gap:0.25rem}
+  label{font-weight:600}
+  input[type="text"],
+  input[type="email"],
+  textarea{
+    padding:0.5rem;
+    border:1px solid #cfcfcf;
+    border-radius:6px;
+    font-size:1rem;
+    color:var(--text);
+    background:#fff;
+  }
+  textarea{resize:vertical;min-height:120px}
+  input:focus, textarea:focus{
+    outline:none;
+    box-shadow:0 0 0 4px var(--focus-ring);
+    border-color:var(--primary);
+  }
+  
+  /* Buttons */
+  .btn{
+    font-size:1rem;
+    padding:0.6rem 0.9rem;
+    border-radius:var(--radius);
+    border:1px solid transparent;
+    cursor:pointer;
+  }
+  .btn-primary{
+    background:var(--primary);
+    color:var(--primary-contrast);
+    border-color:var(--primary);
+  }
+  .btn-secondary{
+    background:transparent;
+    color:var(--primary);
+    border-color:var(--primary);
+  }
+  
+  /* Focus-visible for keyboard users */
+  :focus-visible{
+    outline:3px solid var(--focus-ring);
+    outline-offset:2px;
+  }
+  
+  /* Visually hidden helper */
+  .visually-hidden,
+  .sr-only{
+    position:absolute!important;
+    width:1px!important;
+    height:1px!important;
+    padding:0!important;
+    margin:-1px!important;
+    overflow:hidden!important;
+    clip:rect(0,0,0,0)!important;
+    white-space:nowrap!important;
+    border:0!important;
+  }
+  
+  /* Footer */
+  .site-footer{
+    border-top:1px solid #e6e6e6;
+    padding:1rem 0 2rem;
+    margin-top:2rem;
+  }
+  
+  /* Responsive tweaks */
+  @media (min-width:700px){
+    .project{grid-template-columns: 320px 1fr; align-items:start}
+    .skills ul{columns:3}
+  }
+
+  .primary-nav {
+    display: none; /* Hide navigation by default */
+}
+
+.hamburger {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .primary-nav {
+        display: block; /* Show navigation on larger screens */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger on larger screens */
+    }
+}
