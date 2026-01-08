@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header role="banner" class="site-header">
+        <div class="container">
+            <!-- Single, meaningful H1 -->
+            <a href="/" class="site-logo" aria-label="Homepage">
+                <h1>Hong Lee</h1>
+            </a>
+    
+            <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+    
+            <nav role="navigation" aria-label="Primary navigation" class="primary-nav">
+                <ul class="nav-list">
+                    <li><a href="#about-me">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <main id="main" role="main" class="container" tabindex="-1">
+    <!-- About Me (H2) -->
+    <section id="about-me" class="about" aria-labelledby="about-me-heading">
+      <h2 id="about-me-heading">About Me</h2>
+      <p>
+        Hi — I'm <strong>Hong Lee</strong>, a full‑stack developer focused on building accessible,
+        performant web applications. I enjoy crafting clean user interfaces, designing maintainable systems,
+        and learning modern tooling and best practices.
+      </p>
+    </section>
+
+    <!-- Projects (H2) with H3 per project -->
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+
+      <article class="project" aria-labelledby="project-1-title">
+        <figure>
+          <img src="project-1-placeholder.png" alt="Project One dashboard: charts, filters, and a summary metrics panel" width="640" height="360" />
+          <figcaption>Project One — Dashboard & analytics UI</figcaption>
+        </figure>
+        <header>
+          <h3 id="project-1-title">Project One</h3>
+        </header>
+        <p>Responsive analytics dashboard built with a component-first architecture.</p>
+      </article>
+
+      <article class="project" aria-labelledby="project-2-title">
+        <figure>
+          <img src="project-2-placeholder.png" alt="Project Two API overview: endpoints and background worker flow diagram" width="640" height="360" />
+          <figcaption>Project Two — API & automation</figcaption>
+        </figure>
+        <header>
+          <h3 id="project-2-title">Project Two</h3>
+        </header>
+        <p>Scalable REST API with background processing and automated deployments.</p>
+      </article>
+
+      <article class="project" aria-labelledby="project-3-title">
+        <figure>
+          <img src="project-3-placeholder.png" alt="Project Three mobile app UI: list view and offline indicator" width="640" height="360" />
+          <figcaption>Project Three — Mobile-friendly app</figcaption>
+        </figure>
+        <header>
+          <h3 id="project-3-title">Project Three</h3>
+        </header>
+        <p>Progressive web app with offline capabilities and performant animations.</p>
+      </article>
+    </section>
+
+    <!-- Skills (H2) -->
+    <section id="skills" class="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul>
+        <li>HTML5 & semantic markup</li>
+        <li>CSS3, Responsive Design</li>
+        <li>JavaScript, TypeScript</li>
+        <li>React, Next.js</li>
+        <li>Node.js, Express</li>
+        <li>REST & GraphQL</li>
+        <li>Testing & CI/CD</li>
+        <li>Accessibility (a11y)</li>
+      </ul>
+    </section>
+
+    <!-- Contact (H2) -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p id="contact-desc">Send a message — I'll get back to you within a few business days.</p>
+
+      <form id="contact-form" action="#" method="post" novalidate aria-describedby="contact-desc">
+        <fieldset>
+          <legend>Contact details</legend>
+
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="site-footer">
+    <div class="container">
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav">
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#terms">Terms</a></li>
+        </ul>
+      </nav>
+      <small>&copy; 2026 Hong Lee</small>
+    </div>
+  </footer>
+</body>
+</html>
